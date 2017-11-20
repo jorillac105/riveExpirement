@@ -1,0 +1,19 @@
+.oribot {
+    color: #4C51EA;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+#output {
+    font-family: 'Indie Flower', cursive;
+    color: green;
+    font-size: 20px;
+}
+
+body{
+    background-color: #F25C5C;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}

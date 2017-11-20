@@ -13,7 +13,8 @@ function setup() {
     function chat() {
         let input = user_input.value();
         let reply = bot.reply("local-user", input);
-        output.html(reply);
+        output.html('');
+        showText('#output', reply, 0, 50);
     }
 
     function loading_done (batch_num) {
@@ -26,6 +27,13 @@ function setup() {
     // It's good to catch errors too!
     function loading_error (error) {
     	console.log("Error when loading files: " + error);
+    }
+
+    var showText = function (target, message, index, interval) {
+        if (index < message.length) {
+            $(target).append(message[index++]);
+            setTimeout(function () { showText(target, message, index, interval); }, interval);
+        }
     }
 }
 
